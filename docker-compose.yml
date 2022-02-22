@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: digitalocean.com/php
+    image: php:8.1-fpm
     container_name: app
     restart: unless-stopped
     tty: true
