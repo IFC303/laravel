@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: tragamillas/laravel
+    image: ifc303/laravel-app
     container_name: app
     restart: unless-stopped
     tty: true
@@ -32,6 +32,7 @@ services:
     volumes:
       - ./:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./nginx/ssl/:/etc/nginx/ssl/
     networks:
       - app-network
 
